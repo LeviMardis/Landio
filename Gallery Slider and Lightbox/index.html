@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="test" id="lightbox-container">
+    <div id="lightbox-content">
+      <div id="photo-content">
+        <div class="" id="photo-wrap" onclick="openLightbox()">
+          <img class="photo-large" src="assets/az_yavapai_00002_1.jpeg" />
+        </div>
+        <div id="lightbox-text"></div>
+      </div>
+      <div id="gallery-container">
+        <div id="gallery-slider">
+          <div id="gallery-focus"></div>
+        </div>
+        <div id="gallery-overlay"></div>
+      </div>
+      <div class="hidden button" id="lightbox-close" onclick="closeLightbox()">
+        X
+      </div>
+      <div class="hidden button" id="lightbox-grid" onclick="toggleGrid()">
+        #
+      </div>
+      <div id="scroll-right-overlay" onclick="scrollToRight()"></div>
+      <div id="scroll-left-overlay" onclick="scrollToLeft()"></div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>

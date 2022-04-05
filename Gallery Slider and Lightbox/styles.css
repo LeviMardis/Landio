@@ -1,0 +1,155 @@
+body {
+  margin: 0px;
+}
+
+#gallery-container {
+  background: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+  min-height: 80px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+#gallery-slider::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+#photo-content::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+#photo-wrap {
+  display: flex;
+}
+#photo-content {
+  overflow-x: scroll;
+  display: flex;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  position: relative;
+  margin: 15px;
+}
+#lightbox-container {
+  width: 800px;
+  height: 500px;
+  padding: 20px;
+}
+#lightbox-content {
+  position: relative;
+  background: white;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+#scroll-right-overlay {
+  position: absolute;
+  top: 0%;
+  bottom: 90px;
+  right: 0%;
+  left: 90%;
+  z-index: 5;
+}
+#scroll-left-overlay {
+  position: absolute;
+  top: 0%;
+  bottom: 90px;
+  right: 90%;
+  left: 0%;
+  z-index: 5;
+}
+#lightbox-grid {
+  top: 0;
+  right: 50px;
+}
+#lightbox-close {
+  top: 0;
+  right: 10px;
+}
+.button {
+  display: block;
+  border: 2px solid #333;
+  background: #333;
+  border-radius: 3px;
+  position: absolute;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.button:hover {
+  background: green;
+  border-color: green;
+  color: #333;
+}
+.lightbox-open {
+  height: auto !important;
+  width: auto !important;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px !important;
+  background: rgb(0, 0, 0, 0.7);
+}
+.lightbox-open .photo-large {
+  width: calc(100vw - 110px) !important;
+}
+.photo {
+  width: 58px;
+  height: 80px;
+  object-fit: cover;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-right: 1px;
+  padding-left: 1px;
+}
+.photo-large {
+  width: 100%;
+  object-fit: contain;
+}
+#gallery-slider {
+  width: 100%;
+  display: flex;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-x: scroll;
+}
+#gallery-focus {
+  width: 100%;
+  display: flex;
+  margin-left: 50%;
+  overflow-x: visible;
+  transition: all 0.2s ease;
+  transform: translateX(-80px);
+}
+#gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 1%,
+    rgba(255, 255, 255, 0) 6%,
+    rgba(255, 255, 255, 0) 94%,
+    rgba(255, 255, 255, 1) 99%
+  );
+  cursor: default !important;
+}
+.hidden {
+  display: none !important;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid .photo-large {
+  width: 33% !important;
+  padding: 0.15%;
+  cursor: pointer;
+}
